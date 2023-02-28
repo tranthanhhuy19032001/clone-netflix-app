@@ -1,0 +1,154 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 70px;
+    transition-timing-function: ease-in;
+    transition: all 1s;
+    z-index: 10;
+    .nav-container {
+        background-color: transparent;
+        width: 100%;
+        display: flex;
+        padding: 0 60px;
+        align-items: center;
+        @media screen and (max-width: 750px) {
+            padding: 0 40px;
+        }
+        @media screen and (max-width: 600px) {
+            padding: 0 10px;
+        }
+        @media screen and (max-width: 450px) {
+            padding: 0 5px;
+        }
+        .nav-left {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            .header-logo {
+                width: 150px;
+                height: 65px;
+                @media screen and (max-width: 750px) {
+                    width: 95px;
+                    height: 70px;
+                }
+            }
+            .nav {
+                display: inline;
+                .nav-menu {
+                    list-style-type: none;
+                    display: inline;
+                    @media screen and (max-width: 750px) {
+                        li:not(:nth-child(1)) {
+                            display: none;
+                        }
+                        .menu-trigger {
+                            display: inline;
+                        }
+                    }
+                    @media screen and (min-width: 750px) {
+                        .menu-trigger {
+                            display: none;
+                            padding-left: 20px;
+                            align-content: center;
+                        }
+                    }
+                    .nav-tippy {
+                        padding: 10px 0;
+                        .nav-tippy-item {
+                            font-size: 1rem;
+                            padding: 10px 100px;
+                            &:hover {
+                                background-color: rgba(37, 32, 32, 0.5);
+                            }
+                        }
+                    }
+                    .menu-trigger {
+                        svg {
+                            padding-left: 5px;
+                            vertical-align: -0.225em;
+                        }
+                    }
+                    li {
+                        display: inline;
+                        padding-left: 20px;
+                        align-content: center;
+                    }
+                    .menu-tab {
+                        font-size: 1.2rem;
+                        color: #e5e5e5;
+                    }
+                }
+            }
+        }
+        .nav-right {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            width: 10%;
+            .nav-element {
+                margin-left: 18px;
+                .search-box {
+                    display: flex;
+                    justify-content: flex-end;
+                    transition-timing-function: ease-in;
+                    transition: all 1s;
+                    .search-icon-btn {
+                        display: flex;
+                        cursor: pointer;
+                        z-index: 1;
+                    }
+                    .search-btn {
+                        display: none;
+                        opacity: 0;
+                        border: none;
+                        // background-color: transparent;
+                        .search-icon {
+                            border: none;
+                            cursor: pointer;
+                            transform: translateX(35px);
+                            background-color: transparent;
+                            color: #fff;
+                        }
+                        .search-input {
+                            padding: 6px;
+                            border: 1px solid #fff;
+                            color: #fff;
+                            background-color: var(--black);
+                            padding-left: 40px;
+                        }
+                    }
+                }
+                .notification-box {
+                    align-items: center;
+                    .tippy-notification {
+                        padding: 50px;
+                        background-color: red;
+                    }
+                    .notification-btn {
+                        cursor: pointer;
+                        border: none;
+                    }
+                }
+                .avatar-box {
+                    cursor: pointer;
+                    .user-avatar {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search-btn,
+.notification-btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+}

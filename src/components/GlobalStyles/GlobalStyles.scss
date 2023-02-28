@@ -1,0 +1,37 @@
+@import 'normalize.css';
+:root {
+    --red: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --dark: rgb(23, 24, 24);
+    --green: rgb(92, 223, 92);
+    --text-color: #161823;
+    // Default layout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
+}
+
+body {
+    font-family: 'Ubuntu' sans-serif;
+    font-size: 1.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #181414;
+    color: var(--white);
+    font-size: 100%;
+    a {
+        color: var(--white);
+        text-decoration: none;
+        &:hover {
+            color: #b3b3b3;
+        }
+    }
+}
