@@ -24,6 +24,8 @@ function Header() {
     const [searchKey, setSearchKey] = useState('');
     const navigate = useNavigate();
 
+    // const { id } = useParams();
+
     // Handle logic
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
@@ -68,7 +70,7 @@ function Header() {
     const userMenu = [
         {
             icon: <FontAwesomeIcon icon={faPen} />,
-            title: 'View profile',
+            title: 'Quản lý tài khoản',
             to: '/@huy',
         },
         {
@@ -105,7 +107,13 @@ function Header() {
                                             <Link to={'/'}>Trang chủ</Link>
                                         </div>
                                         <div className={cx('nav-tippy-item')}>
-                                            <Link to={'/genre/83'}>Phim T.hình</Link>
+                                            <Link to={'/genre/19'}>Phim T.hình</Link>
+                                        </div>
+                                        <div className={cx('nav-tippy-item')}>
+                                            <Link to={'/genre/03'}>Phim</Link>
+                                        </div>
+                                        <div className={cx('nav-tippy-item')}>
+                                            <Link to={'/genre/latest'}>Mới & phổ biến nhất</Link>
                                         </div>
                                     </div>
                                 }
@@ -122,10 +130,11 @@ function Header() {
                                 <Link to={'/'}>Trang chủ</Link>
                             </li>
                             <li className={cx('menu-tab')}>
-                                <Link to={'/genre/83'}>Phim T.hình</Link>
+                                {/* <span onClick={handleProceed}>Phim T.hình {id}</span> */}
+                                <Link to={'/genre/19'}>Phim T.hình</Link>
                             </li>
                             <li className={cx('menu-tab')}>
-                                <Link to={'/genre/34399'}>Phim</Link>
+                                <Link to={'/genre/03'}>Phim</Link>
                             </li>
                             <li className={cx('menu-tab')}>
                                 <Link to={'/latest'}>Mới & phổ biến nhất</Link>

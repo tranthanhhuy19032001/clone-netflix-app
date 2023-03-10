@@ -1,10 +1,2 @@
-import TVMovies from '../../components/TVMovies';
-
-function Genre() {
-    return (
-        <div style={{ minHeight: '60vh' }}>
-            <TVMovies />
-        </div>
-    );
-}
-export default Genre;
+export { default as genreFilms } from './genreFilms';
+export { default as genreTvMovies } from './genreTvMovies';

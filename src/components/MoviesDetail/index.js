@@ -2,6 +2,8 @@ import classNames from 'classnames/bind';
 import { useDispatch } from 'react-redux';
 import { setMovieDetail } from '../store/actions';
 import styles from './MoviesDetail.module.scss';
+import { PlayFilmIcon } from '../Icons';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -35,11 +37,19 @@ function MoviesDetail(props) {
                             <div className={cx('movies-info')}>
                                 <h1 className={cx('movie-title')}>{movie.title || movie.original_title}</h1>
                                 <p className={cx('statistical')}>
-                                    <span className={cx('rating')}>Rating: {movie.vote_average * 100}%</span>
-                                    <span className={cx('popularity')}>Popularity: {movie.popularity}</span>
+                                    <span className={cx('rating')}>Độ trùng: {movie.vote_average * 10}%</span>
+                                    <span className={cx('popularity')}>Phổ biến: {movie.popularity}</span>
                                 </p>
-                                <p className={cx('release-date')}>Release Date: {movie.release_date}</p>
+                                <p className={cx('release-date')}>Ngày ra mắt: {movie.release_date}</p>
                                 <p className={cx('overview')}>{movie.overview}</p>
+                            </div>
+                            <div className={cx('movies-action')}>
+                                <Link to={'/watch/:id'} className={cx('play-btn')}>
+                                    <div className={cx('icon-play')}>
+                                        <PlayFilmIcon />
+                                    </div>
+                                    <span className={cx('icon-title')}>Phát</span>
+                                </Link>
                             </div>
                         </div>
                     </div>

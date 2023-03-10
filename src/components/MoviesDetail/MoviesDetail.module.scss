@@ -36,6 +36,7 @@
             height: 50%;
         }
         .container {
+            margin-top: 10px;
             position: relative;
             width: 60%;
             height: 100%;
@@ -50,6 +51,57 @@
             }
             @media screen and (max-width: 600px) {
                 background: linear-gradient(90deg, rgba(0, 0, 0, 0.88) 60%, transparent);
+            }
+            .movies-info {
+                width: 60%;
+                padding: 10px;
+                .movie-title {
+                    font-size: 2.5rem;
+                }
+                .statistical {
+                    padding-top: 10px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    .rating {
+                        color: green;
+                    }
+                    .popularity {
+                        padding-left: 15px;
+                        color: yellow;
+                    }
+                }
+                .release-date {
+                    padding-top: 10px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+                .overview {
+                    padding-top: 10px;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                }
+            }
+            .movies-action {
+                width: 60%;
+                padding: 10px;
+                .play-btn {
+                    background-color: #e6e6e6;
+                    display: inline-block;
+                    padding: 10px 30px 5px 20px;
+                    border-radius: 4px;
+                    .icon-play {
+                        display: inline;
+                        color: var(--black);
+                    }
+                    .icon-title {
+                        position: relative;
+                        left: 10px;
+                        top: -5px;
+                        font-size: 1.5rem;
+                        color: var(--black);
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
